@@ -1,0 +1,24 @@
+@import "tailwindcss";
+
+@theme {
+  --color-brand-accent: #e11d48;
+  --color-dark-bg: #0f172a;
+  --color-dark-card: #1e293b;
+  --font-sans: "Inter", sans-serif;
+  --font-serif: "Merriweather", serif;
+  --shadow-soft: 0 10px 40px -10px rgba(0,0,0,0.08);
+}
+
+@custom-variant dark (&:is(.dark *));
+
+@layer base {
+  body {
+    @apply font-sans antialiased bg-gray-50 text-gray-900 transition-colors duration-300;
+  }
+  
+  .dark body {
+    @apply bg-dark-bg text-gray-100;
+  }
+}
+
+
